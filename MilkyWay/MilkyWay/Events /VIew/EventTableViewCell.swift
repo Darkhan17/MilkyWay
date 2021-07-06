@@ -17,7 +17,6 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     
-  
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,7 +28,10 @@ class EventTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-        
+    
+
+    
+    // setting configuration cell
     func configure(with event: Event){
         self.titleLabel.text = event.name
         self.descriptionLabel.text = event.details
@@ -38,25 +40,28 @@ class EventTableViewCell: UITableViewCell {
         self.indicator.isHidden = false
         self.indicator.startAnimating()
         self.eventImage.isHidden = false
+        
         EventNetworkService.getImage(from: event.imageUrl) { (image) in
             self.eventImage.image = image
             /* self.indicator.stopAnimating()
             self.indicator.isHidden = true
             self.imageView?.isHidden = false
             */
-            print("end")
  
         }
         
         setStyle()
     }
     
+    // mark: setting style of cell
     func setStyle(){
         indicator.isHidden = true
         eventView.layer.cornerRadius = eventView.frame.height/6
         contentView.backgroundColor = .black
     }
     
+    
+    // mark: parsing date from Dictionary
     func getStringFromDate(from date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"

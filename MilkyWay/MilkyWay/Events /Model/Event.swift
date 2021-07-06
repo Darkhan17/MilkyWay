@@ -13,7 +13,7 @@ class Event {
     var name: String
     var eventImage: UIImage?
     var imageUrl : URL?
-    var webcast : URL?
+    var webcast : String?
     var details : String?
     var date : Date?
     
@@ -24,6 +24,7 @@ class Event {
     init?(dict: [String: AnyObject]) {
         guard let flightNumber = dict["flight_number"] as? Int ,
             let name = dict["name"] as? String
+            //let imageUrl = Event.getImageUrl(dict: dict)
         else {
             return nil
         }
@@ -31,8 +32,8 @@ class Event {
         self.flightNumber = flightNumber
         self.name = name
         self.details = dict["details"] as? String
-        self.webcast = getWebcast(dict: dict)
-        self.imageUrl = getImageUrl(dict: dict)
+        self.webcast = getWebcastId(dict: dict)
+        self.imageUrl = self.getImageUrl(dict: dict)
         self.date = getDate(dict: dict)
     }
     
@@ -45,11 +46,11 @@ class Event {
         return url
     }
     
-    private func getWebcast(dict: [String:AnyObject]) -> URL?{
+    private func getWebcastId(dict: [String:AnyObject]) -> String?{
         guard let links = dict["links"] as? [String:AnyObject],
-              let webcastUrl = links["webcast"] as? String
+              let webcastId = links["youtube_id"] as? String
               else { return nil }
-        return URL(string: webcastUrl)
+        return webcastId
     }
     
     private func getDate(dict: [String : AnyObject]) -> Date?{

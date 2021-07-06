@@ -9,8 +9,11 @@ import Foundation
 import UIKit
 
 class EventNetworkService {
-    private init(){}
     
+    static var imageCache = NSCache<NSString,UIImage>()
+
+    private init(){}
+
     static func getEvents(completion: @escaping(GetEventResponse) -> ()){
         guard let url = URL(string: "https://api.spacexdata.com/v4/launches/upcoming") else { return }
         
@@ -27,11 +30,17 @@ class EventNetworkService {
     
     static func getImage(from url: URL?, comletion: @escaping(UIImage)->()) {
         guard let imageUrl = url else { return }
-        DispatchQueue.global().async {
-            if let data = try? Data(contentsOf: imageUrl){
-                if let image = UIImage(data: data){
-                    DispatchQueue.main.async {
-                        comletion(image)
+        if let cachedImage = imageCache.object(forKey: imageUrl.absoluteString as NSString){
+            comletion(cachedImage)
+        }
+        else {
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: imageUrl){
+                    if let image = UIImage(data: data){
+                        DispatchQueue.main.async {
+                            self.imageCache.setObject(image, forKey: imageUrl.absoluteString as NSString)
+                            comletion(image)
+                        }
                     }
                 }
             }

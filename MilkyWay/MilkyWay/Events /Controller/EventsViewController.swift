@@ -63,6 +63,11 @@ class EventsViewController: UITableViewController {
         return CGFloat(200)
     }
     
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -98,14 +103,22 @@ class EventsViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "detailEvent"{
+            let destination = segue.destination as! EventDetailViewController
+            guard let indexPath = tableView.indexPathForSelectedRow else {return}
+            
+            let event = events[indexPath.row]
+
+            destination.eventTitle = event.name
+            destination.eventDescription = event.details
+            destination.eventImage = event.eventImage
+        }
     }
-    */
+    
 
 }

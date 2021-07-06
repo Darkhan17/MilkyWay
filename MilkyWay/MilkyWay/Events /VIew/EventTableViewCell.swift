@@ -28,7 +28,7 @@ class EventTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    
+
 
     
     // setting configuration cell
@@ -40,7 +40,7 @@ class EventTableViewCell: UITableViewCell {
         self.indicator.isHidden = false
         self.indicator.startAnimating()
         self.eventImage.isHidden = false
-        
+        self.eventImage.image = UIImage(named: "rocket")
         EventNetworkService.getImage(from: event.imageUrl) { (image) in
             self.eventImage.image = image
             /* self.indicator.stopAnimating()

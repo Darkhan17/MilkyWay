@@ -10,13 +10,13 @@ import youtube_ios_player_helper
 class EventDetailViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var eventImageView: UIImageView!
     @IBOutlet weak var youtubeView: YTPlayerView!
-    var videoId : String?
-    var eventTitle : String?
-    var eventDescription : String?
-    var eventImage : UIImage?
+    
+    @IBOutlet weak var detailsLabel: UILabel!
+    @IBOutlet weak var dateStackView: UIStackView!
+    var event: Event?
     
     
     
@@ -26,15 +26,20 @@ class EventDetailViewController: UIViewController {
         
         setConfig()
         // Do any additional setup after loading the view.
+        
+        setDesign()// set style 
     }
     
     
     func setConfig(){
-        titleLabel.text = eventTitle
-        descriptionLabel.text = eventDescription
-        eventImageView.image = eventImage
-        guard let youtubeId = videoId else { return }
-        youtubeView.load(withVideoId: youtubeId)
+        titleLabel.text = event?.name
+        detailsLabel.text = event?.details
+        eventImageView.image = event?.eventImage
+        youtubeView.load(withVideoId: "bsM1qdGAVbU")
+    }
+    
+    func setDesign(){
+        dateStackView.layer.cornerRadius = dateStackView.frame.height/6
     }
 
     /*

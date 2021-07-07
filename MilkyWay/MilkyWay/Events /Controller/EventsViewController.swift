@@ -68,6 +68,8 @@ class EventsViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -114,9 +116,7 @@ class EventsViewController: UITableViewController {
             
             let event = events[indexPath.row]
 
-            destination.eventTitle = event.name
-            destination.eventDescription = event.details
-            destination.eventImage = event.eventImage
+            destination.event = event
         }
     }
     

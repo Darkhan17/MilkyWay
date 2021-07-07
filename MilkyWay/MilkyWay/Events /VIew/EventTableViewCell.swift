@@ -37,17 +37,12 @@ class EventTableViewCell: UITableViewCell {
         self.descriptionLabel.text = event.details
         self.flightNumber.text = "Flight number:\(event.flightNumber)"
         self.dateLabel.text = "Date: \(getStringFromDate(from: event.date!))"
-        self.indicator.isHidden = false
-        self.indicator.startAnimating()
-        self.eventImage.isHidden = false
         self.eventImage.image = UIImage(named: "rocket")
+        self.eventImage.isHidden = false
+        event.eventImage = self.eventImage.image
         EventNetworkService.getImage(from: event.imageUrl) { (image) in
             self.eventImage.image = image
-            /* self.indicator.stopAnimating()
-            self.indicator.isHidden = true
-            self.imageView?.isHidden = false
-            */
- 
+            event.eventImage = image
         }
         
         setStyle()

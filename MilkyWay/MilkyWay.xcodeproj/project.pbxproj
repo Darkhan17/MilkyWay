@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4E6AB27FBDCC97948EC4792D /* Pods_MilkyWay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B3705595BFA9BCA60012AA /* Pods_MilkyWay.framework */; };
+		5008276C26961A010082ADF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5008276B26961A010082ADF9 /* GoogleService-Info.plist */; };
 		505277A0268E1E5B002417F1 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5052779F268E1E5B002417F1 /* EventTableViewCell.swift */; };
 		5064D4402694603700973D56 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5064D43F2694603700973D56 /* EventDetailViewController.swift */; };
 		50BF4C69268A57D600790334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BF4C68268A57D600790334 /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5008276B26961A010082ADF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5052779F268E1E5B002417F1 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		5064D43F2694603700973D56 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		50BF4C65268A57D600790334 /* MilkyWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MilkyWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +123,7 @@
 				50BF4C6C268A57D600790334 /* ViewController.swift */,
 				50BF4C71268A57D700790334 /* Assets.xcassets */,
 				50BF4C76268A57D700790334 /* Info.plist */,
+				5008276B26961A010082ADF9 /* GoogleService-Info.plist */,
 			);
 			path = MilkyWay;
 			sourceTree = "<group>";
@@ -248,7 +251,6 @@
 				C9D4CE005F22A356E39B0DA3 /* Pods-MilkyWay.debug.xcconfig */,
 				C6FE2F656111A4B4AFEEE5BF /* Pods-MilkyWay.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -312,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50BF4C75268A57D700790334 /* LaunchScreen.storyboard in Resources */,
+				5008276C26961A010082ADF9 /* GoogleService-Info.plist in Resources */,
 				50BF4C72268A57D700790334 /* Assets.xcassets in Resources */,
 				50BF4C70268A57D600790334 /* Main.storyboard in Resources */,
 			);

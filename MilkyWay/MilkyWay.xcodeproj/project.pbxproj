@@ -11,6 +11,7 @@
 		5008276C26961A010082ADF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5008276B26961A010082ADF9 /* GoogleService-Info.plist */; };
 		505277A0268E1E5B002417F1 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5052779F268E1E5B002417F1 /* EventTableViewCell.swift */; };
 		5064D4402694603700973D56 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5064D43F2694603700973D56 /* EventDetailViewController.swift */; };
+		5065127226A1331E00B33DB4 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065127126A1331E00B33DB4 /* RegistrationViewController.swift */; };
 		50BF4C69268A57D600790334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BF4C68268A57D600790334 /* AppDelegate.swift */; };
 		50BF4C6B268A57D600790334 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BF4C6A268A57D600790334 /* SceneDelegate.swift */; };
 		50BF4C6D268A57D600790334 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BF4C6C268A57D600790334 /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 		5008276B26961A010082ADF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5052779F268E1E5B002417F1 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		5064D43F2694603700973D56 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		5065127126A1331E00B33DB4 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		50BF4C65268A57D600790334 /* MilkyWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MilkyWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BF4C68268A57D600790334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50BF4C6A268A57D600790334 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		50E066F4268B4EFF0058C5F2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5065127126A1331E00B33DB4 /* RegistrationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				50E06707268BAB0F0058C5F2 /* EventNetworkService.swift in Sources */,
 				50BF4C6D268A57D600790334 /* ViewController.swift in Sources */,
 				50E066FE268B524B0058C5F2 /* EventsViewController.swift in Sources */,
+				5065127226A1331E00B33DB4 /* RegistrationViewController.swift in Sources */,
 				50BF4C69268A57D600790334 /* AppDelegate.swift in Sources */,
 				50E06710268BACE10058C5F2 /* GetEventResponse.swift in Sources */,
 				505277A0268E1E5B002417F1 /* EventTableViewCell.swift in Sources */,

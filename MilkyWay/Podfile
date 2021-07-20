@@ -8,6 +8,6 @@ target 'MilkyWay' do
   # Pods for MilkyWay
   pod "youtube-ios-player-helper"
   pod "Firebase"
-  
+  pod 'Firebase/Auth'
   
 end

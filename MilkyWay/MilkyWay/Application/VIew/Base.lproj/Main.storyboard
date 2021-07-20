@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Registration View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="RegistrationViewController" customModule="MilkyWay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="MilkyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIScrollView">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,7 +52,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="loginPressed:" destination="8Al-dx-S0t" eventType="touchUpInside" id="eeV-W9-fyg"/>
+                                                    <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yuw-Lv-JZa"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -83,16 +83,21 @@
                             <constraint firstItem="Jfh-GH-Umu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bCc-Ra-XV7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="lwT-ZB-6ho" id="uAG-t8-icT"/>
+                        <outlet property="passwordTextField" destination="tnM-M5-f55" id="9ss-xT-mzP"/>
+                        <segue destination="9ky-bR-SBw" kind="show" identifier="mainVCSegue" id="1Ei-67-ewO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="8Al-dx-S0t" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="33.846153846153847" y="93.838862559241704"/>
         </scene>
-        <!--View Controller-->
+        <!--Registration View Controller-->
         <scene sceneID="Yew-tE-DLs">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="A0y-uU-GWA" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="A0y-uU-GWA" customClass="RegistrationViewController" customModule="MilkyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9nB-QL-qr3">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,6 +121,9 @@
                                         <state key="normal" title="Register">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerPressed:" destination="A0y-uU-GWA" eventType="touchUpInside" id="LFC-Ke-74X"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -132,17 +140,22 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vvg-Yf-WtL"/>
+                    <connections>
+                        <outlet property="loginTextField" destination="eTx-dV-wG1" id="lF5-UR-rgJ"/>
+                        <outlet property="passwordTextField" destination="wem-Im-D0n" id="v44-Ql-ryf"/>
+                        <segue destination="9ky-bR-SBw" kind="show" identifier="mainVCSegue" id="45t-yW-Syi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IqO-ih-XE3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="837" y="94"/>
+            <point key="canvasLocation" x="906" y="85"/>
         </scene>
         <!--Item-->
         <scene sceneID="FNd-JZ-CNu">
             <objects>
                 <viewController id="D2D-sV-FxM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KRY-HI-cEo">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="dLl-Rq-zTr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -388,6 +401,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="9ky-bR-SBw" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="oFj-Rw-Yyq"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y0Q-GT-lmH">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -402,6 +416,9 @@
             <point key="canvasLocation" x="1724.6153846153845" y="93.838862559241704"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="45t-yW-Syi"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

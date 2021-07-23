@@ -17,15 +17,25 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
         NotificationCenter.default.addObserver(self, selector: #selector(kbDidShow), name: UIResponder.keyboardDidShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(kbDidHide), name: UIResponder.keyboardDidHideNotification, object: nil)
         
-        
-        
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            if user != nil {
+                self  .performSegue(withIdentifier: "mainVCSegue", sender: nil)
+            }
+        }
+
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        emailTextField.text = ""
+        passwordTextField.text = ""
     }
     
     
@@ -57,12 +67,7 @@ class LoginViewController: UIViewController {
             if error != nil {
                 self?.displayAlert(with: "Error", and: "Email or password is incorrect")
                 return
-            }
-            if (user != nil){
-                self?.performSegue(withIdentifier: "mainVCSegue", sender: nil)
-                return
-            }
-            
+            }            
             
         }
         

@@ -13,6 +13,7 @@
 		5064D4402694603700973D56 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5064D43F2694603700973D56 /* EventDetailViewController.swift */; };
 		5065127226A1331E00B33DB4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065127126A1331E00B33DB4 /* LoginViewController.swift */; };
 		5065128526A72CDB00B33DB4 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065128426A72CDB00B33DB4 /* RegistrationViewController.swift */; };
+		5065129926A9F43600B33DB4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065129826A9F43600B33DB4 /* ProfileViewController.swift */; };
 		50BF4C69268A57D600790334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BF4C68268A57D600790334 /* AppDelegate.swift */; };
 		50BF4C6B268A57D600790334 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BF4C6A268A57D600790334 /* SceneDelegate.swift */; };
 		50BF4C6D268A57D600790334 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BF4C6C268A57D600790334 /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 		5064D43F2694603700973D56 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		5065127126A1331E00B33DB4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5065128426A72CDB00B33DB4 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		5065129826A9F43600B33DB4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		50BF4C65268A57D600790334 /* MilkyWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MilkyWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BF4C68268A57D600790334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50BF4C6A268A57D600790334 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,75 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		5065128726A93A8900B33DB4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5065128426A72CDB00B33DB4 /* RegistrationViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5065128826A93A9900B33DB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5065128926A93AA300B33DB4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5065128A26A93AB800B33DB4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5065127126A1331E00B33DB4 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5065128B26A93ACA00B33DB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5065128F26A9789800B33DB4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5065129226A978C000B33DB4 /* Model */,
+				5065129126A978B900B33DB4 /* View */,
+				5065129026A978A400B33DB4 /* Controller */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		5065129026A978A400B33DB4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5065129826A9F43600B33DB4 /* ProfileViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5065129126A978B900B33DB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5065129226A978C000B33DB4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		50BF4C5C268A57D600790334 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				50E066F2268B4EE70058C5F2 /* Application */,
+				5065128F26A9789800B33DB4 /* Profile */,
 				50E066F8268B4FAE0058C5F2 /* Registration  */,
 				50E066F6268B4F5B0058C5F2 /* Login */,
 				50E066F9268B4FBF0058C5F2 /* Events  */,
@@ -154,8 +226,6 @@
 		50E066F4268B4EFF0058C5F2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5065127126A1331E00B33DB4 /* LoginViewController.swift */,
-				5065128426A72CDB00B33DB4 /* RegistrationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -172,6 +242,8 @@
 		50E066F6268B4F5B0058C5F2 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				5065128B26A93ACA00B33DB4 /* View */,
+				5065128A26A93AB800B33DB4 /* Controller */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -179,6 +251,9 @@
 		50E066F8268B4FAE0058C5F2 /* Registration  */ = {
 			isa = PBXGroup;
 			children = (
+				5065128926A93AA300B33DB4 /* Model */,
+				5065128826A93A9900B33DB4 /* View */,
+				5065128726A93A8900B33DB4 /* Controller */,
 			);
 			path = "Registration ";
 			sourceTree = "<group>";
@@ -379,6 +454,7 @@
 				50E06717268BB09A0058C5F2 /* Event.swift in Sources */,
 				50E06714268BAFC10058C5F2 /* NetworkError.swift in Sources */,
 				50E06707268BAB0F0058C5F2 /* EventNetworkService.swift in Sources */,
+				5065129926A9F43600B33DB4 /* ProfileViewController.swift in Sources */,
 				5065128526A72CDB00B33DB4 /* RegistrationViewController.swift in Sources */,
 				50BF4C6D268A57D600790334 /* ViewController.swift in Sources */,
 				50E066FE268B524B0058C5F2 /* EventsViewController.swift in Sources */,
